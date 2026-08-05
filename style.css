@@ -1,19 +1,18 @@
 :root {
-    --sage-dark: #3A4F41;
-    --sage-mid: #688270;
-    --sage-light: #A2B9A6;
-    --sunny-yellow: #FFD166;
-    --sunny-glow: #FFECA1;
+    --yellow-primary: #FFD166;
+    --yellow-bright: #FFE17D;
+    --pink-primary: #FF6584;
+    --pink-light: #FF8FAB;
+    --pink-gradient: linear-gradient(135deg, #FF6584 0%, #FF8FAB 100%);
+    --yellow-gradient: linear-gradient(135deg, #FFD166 0%, #FFB703 100%);
+    --modern-gradient: linear-gradient(135deg, #FFF9E6 0%, #FFEBF0 50%, #F3E5F5 100%);
     --card-bg: #FFFFFF;
-    --text-color: #2D3732;
-    --text-muted: #6B7C73;
-    --sage-gradient: linear-gradient(135deg, #3A4F41 0%, #688270 100%);
-    --sunny-gradient: linear-gradient(135deg, #FFD166 0%, #F4A261 100%);
-    --modern-gradient: linear-gradient(135deg, #FFFDF5 0%, #F0F4F1 50%, #E2ECE5 100%);
-    --border-color: #D2E0D5;
-    --badge-bg: #E8F0EA;
-    --badge-text: #3A4F41;
-    --shadow: 0 20px 40px rgba(58, 79, 65, 0.12);
+    --text-color: #2D3142;
+    --text-muted: #70798C;
+    --border-color: #FFD1DC;
+    --badge-bg: #FFF0F5;
+    --badge-text: #FF477E;
+    --shadow: 0 20px 45px rgba(255, 101, 132, 0.15);
     --transition: all 0.3s ease;
 }
 
@@ -25,7 +24,7 @@
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background: linear-gradient(135deg, #FFFDEB 0%, #F2F7F4 40%, #D8E5DC 100%);
+    background: linear-gradient(135deg, #FFFDE6 0%, #FFE3EC 50%, #E8D7F1 100%);
     background-attachment: fixed;
     color: var(--text-color);
     line-height: 1.6;
@@ -38,40 +37,43 @@ body {
     overflow-x: hidden;
 }
 
-/* Modern Geometric & Organic Background Pattern */
+/* Interesting Dynamic Polka & Star Mesh Background Pattern */
 body::before {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background-image: 
-        radial-gradient(rgba(255, 209, 102, 0.25) 2px, transparent 2px),
-        radial-gradient(rgba(104, 130, 112, 0.2) 2px, transparent 2px);
-    background-size: 50px 50px;
-    background-position: 0 0, 25px 25px;
+        radial-gradient(rgba(255, 101, 132, 0.2) 2.5px, transparent 2.5px),
+        radial-gradient(rgba(255, 209, 102, 0.25) 2.5px, transparent 2.5px);
+    background-size: 45px 45px;
+    background-position: 0 0, 22.5px 22.5px;
     pointer-events: none;
     z-index: 0;
 }
 
-/* Floating Modern Decorative Elements */
+/* Lots of Floating Kawaii Characters & Decor */
 .floating-decor {
     position: absolute;
-    font-size: 30px;
-    animation: modernFloat 5s ease-in-out infinite;
+    font-size: 32px;
+    animation: multiFloat 4.5s ease-in-out infinite;
     z-index: 0;
-    opacity: 0.8;
+    opacity: 0.85;
     pointer-events: none;
     filter: drop-shadow(0 5px 10px rgba(0,0,0,0.08));
 }
 
-.decor-1 { top: 40px; left: 8%; animation-delay: 0s; }
-.decor-2 { top: 180px; right: 10%; animation-delay: 1.2s; }
-.decor-3 { top: 360px; left: 6%; animation-delay: 2.4s; }
-.decor-4 { bottom: 120px; right: 8%; animation-delay: 1.6s; }
-.decor-5 { bottom: 80px; left: 12%; animation-delay: 0.8s; }
+.decor-1 { top: 30px; left: 5%; animation-delay: 0s; }
+.decor-2 { top: 150px; right: 6%; animation-delay: 0.8s; }
+.decor-3 { top: 320px; left: 3%; animation-delay: 1.6s; }
+.decor-4 { top: 480px; right: 5%; animation-delay: 2.2s; }
+.decor-5 { bottom: 80px; left: 7%; animation-delay: 1.2s; }
+.decor-6 { bottom: 140px; right: 9%; animation-delay: 2.8s; }
+.decor-7 { top: 220px; left: 1%; animation-delay: 1.9s; }
+.decor-8 { bottom: 250px; right: 2%; animation-delay: 0.5s; }
 
-@keyframes modernFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-14px) rotate(8deg); }
+@keyframes multiFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+    50% { transform: translateY(-16px) rotate(12deg) scale(1.08); }
 }
 
 .container {
@@ -93,7 +95,7 @@ body::before {
 /* Profile Card / Sidebar */
 .profile-card {
     background-color: var(--card-bg);
-    border-radius: 30px;
+    border-radius: 32px;
     padding: 35px 25px;
     box-shadow: var(--shadow);
     display: flex;
@@ -107,14 +109,14 @@ body::before {
 }
 
 .modern-badge {
-    background: var(--sunny-gradient);
-    color: #4A3500;
+    background: var(--yellow-gradient);
+    color: #593D00;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 800;
     padding: 6px 16px;
     border-radius: 20px;
     margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(255, 209, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 209, 102, 0.4);
     letter-spacing: 0.5px;
 }
 
@@ -127,45 +129,44 @@ body::before {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: var(--sage-gradient);
+    background: var(--pink-gradient);
     color: white;
     font-size: 42px;
     font-weight: 800;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 25px rgba(58, 79, 65, 0.3);
+    box-shadow: 0 10px 25px rgba(255, 101, 132, 0.4);
     position: relative;
     border: 4px solid #FFFFFF;
 }
 
-.sage-leaf {
+.char-accessory {
     position: absolute;
-    top: -16px;
     font-size: 26px;
-    animation: leafPulse 2.5s ease-in-out infinite;
+    animation: accWiggle 2s ease-in-out infinite;
 }
 
-.leaf-left { left: 12px; }
-.leaf-right { right: 12px; animation-delay: 1.2s; }
+.crown { top: -20px; right: 30px; animation-delay: 0s; }
+.bunny { top: -18px; left: 15px; animation-delay: 1s; }
 
-@keyframes leafPulse {
-    0%, 100% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.1) rotate(-10deg); }
+@keyframes accWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-10deg) scale(1.1); }
 }
 
 .status-badge {
     position: absolute;
     bottom: 2px;
     right: 2px;
-    background: #E8F0EA;
+    background: #FFF0F5;
     width: 32px;
     height: 32px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 14px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border: 2px solid var(--border-color);
 }
@@ -174,7 +175,7 @@ body::before {
     font-size: 24px;
     margin-bottom: 5px;
     font-weight: 800;
-    color: #2D3732;
+    color: #2D3142;
 }
 
 .nickname {
@@ -193,7 +194,7 @@ body::before {
     padding: 8px 16px;
     border-radius: 20px;
     display: inline-block;
-    border: 1px solid var(--border-color);
+    border: 1.5px dashed var(--pink-primary);
 }
 
 .social-links {
@@ -207,42 +208,50 @@ body::before {
     height: 42px;
     border-radius: 50%;
     background-color: var(--badge-bg);
-    color: var(--sage-dark);
+    color: var(--pink-primary);
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     font-size: 18px;
     transition: var(--transition);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
 }
 
 .social-links a:hover {
-    background: var(--sage-gradient);
+    background: var(--pink-gradient);
     color: white;
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 6px 15px rgba(58, 79, 65, 0.3);
+    box-shadow: 0 6px 15px rgba(255, 101, 132, 0.4);
 }
 
-/* Modern Character Speech Bubble */
+/* Multiple Speech Bubbles with Characters */
 .speech-bubble {
-    background: #F7FAF8;
-    border: 2px solid var(--border-color);
+    background: #FFFDF9;
+    border: 2px solid var(--yellow-primary);
     border-radius: 18px;
-    padding: 12px 18px;
+    padding: 12px 16px;
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 14px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(255, 209, 102, 0.2);
+    margin-bottom: 10px;
+}
+
+.mini-bubble {
+    padding: 8px 14px;
+    border-color: var(--pink-light);
+    box-shadow: 0 4px 12px rgba(255, 143, 171, 0.2);
+    margin-bottom: 0;
 }
 
 .chibi-character {
     font-size: 30px;
-    animation: iconBounce 2s infinite;
+    animation: characterBounce 2s infinite;
 }
 
-@keyframes iconBounce {
+@keyframes characterBounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
 }
@@ -254,7 +263,7 @@ body::before {
 .bubble-text .face {
     font-size: 12px;
     font-weight: 700;
-    color: var(--sage-dark);
+    color: var(--pink-primary);
     display: block;
 }
 
@@ -277,6 +286,7 @@ body::before {
     box-shadow: var(--shadow);
     border: 3px solid var(--border-color);
     animation: fadeIn 0.5s ease-in-out;
+    position: relative;
 }
 
 .section h2 {
@@ -284,10 +294,21 @@ body::before {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 12px;
-    color: #2D3732;
+    color: #2D3142;
     border-bottom: 2px dashed var(--border-color);
     padding-bottom: 12px;
+}
+
+.card-character {
+    font-size: 22px;
+    animation: charWiggle 3s infinite;
+}
+
+@keyframes charWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg) scale(1.1); }
 }
 
 /* Personal Info Grid */
@@ -301,14 +322,14 @@ body::before {
     display: flex;
     justify-content: space-between;
     padding: 12px 16px;
-    background: #F8FBF9;
+    background: #FFFDF9;
     border-radius: 14px;
     border: 1px solid var(--border-color);
     transition: var(--transition);
 }
 
 .info-item:hover {
-    background: #E8F0EA;
+    background: #FFF0F5;
     transform: translateX(4px);
 }
 
@@ -328,7 +349,7 @@ body::before {
     display: flex;
     gap: 20px;
     position: relative;
-    background: #F8FBF9;
+    background: #FFFDF9;
     padding: 18px 22px;
     border-radius: 16px;
     border: 1px solid var(--border-color);
@@ -337,7 +358,7 @@ body::before {
 .timeline-year {
     min-width: 110px;
     font-weight: 700;
-    color: var(--sage-dark);
+    color: var(--pink-primary);
     font-size: 15px;
     display: flex;
     align-items: center;
@@ -346,7 +367,7 @@ body::before {
 .timeline-content h3 {
     font-size: 17px;
     margin-bottom: 4px;
-    color: #2D3732;
+    color: #2D3142;
 }
 
 .timeline-content p, .timeline-content ul {
@@ -361,7 +382,7 @@ body::before {
 
 .role-subtitle {
     font-weight: 700;
-    color: var(--sage-mid) !important;
+    color: var(--pink-primary) !important;
     margin-bottom: 4px;
 }
 
@@ -394,16 +415,16 @@ body::before {
     border-radius: 14px;
     font-size: 14px;
     font-weight: 700;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    border: 1.5px solid var(--border-color);
+    box-shadow: 0 3px 10px rgba(255, 101, 132, 0.1);
     transition: var(--transition);
 }
 
 .badge:hover {
     transform: translateY(-2px);
-    background: var(--sage-gradient);
+    background: var(--pink-gradient);
     color: white;
-    box-shadow: 0 5px 15px rgba(58, 79, 65, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 101, 132, 0.3);
 }
 
 /* Footer */
